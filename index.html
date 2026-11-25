@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>れこめんだー</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎧 れこめんだー</h1>
+      <p>あなたの推し曲と音楽体験をシェアしよう</p>
+    </header>
+
+    <!-- メニュータブ -->
+    <nav class="tabs">
+      <button type="button" class="tab-btn active" data-target="music-tab">🎵 おすすめの音楽</button>
+      <button type="button" class="tab-btn" data-target="survey-tab">📝 アンケート</button>
+    </nav>
+
+    <!-- 送信完了メッセージ（初期は非表示） -->
+    <div id="successMessage" class="success-banner hidden">
+      ✅ 送信されました！ご協力ありがとうございます！
+    </div>
+
+    <!-- タブ1：おすすめの音楽 -->
+    <div id="music-tab" class="tab-content active">
+      <form id="musicForm" class="card">
+        <div class="form-group">
+          <label for="musicNickname">ニックネーム</label>
+          <input type="text" id="musicNickname" placeholder="例：みき" required>
+        </div>
+
+        <div class="form-group">
+          <label for="songName">おすすめの曲</label>
+          <input type="text" id="songName" placeholder="例：怪獣の花唄" required>
+        </div>
+
+        <div class="form-group">
+          <label for="artistName">アーティスト</label>
+          <input type="text" id="artistName" placeholder="例：Vaundy" required>
+        </div>
+
+        <div class="form-group">
+          <label>音楽を聴く頻度</label>
+          <div class="radio-group">
+            <label><input type="radio" name="frequency" value="ほぼ毎日" checked> ほぼ毎日</label>
+            <label><input type="radio" name="frequency" value="週に数回"> 週に数回</label>
+            <label><input type="radio" name="frequency" value="たまに"> たまに</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="musicComment">推しポイント・ひとこと</label>
+          <textarea id="musicComment" rows="3" placeholder="サビが最高！通学中によく聴きます"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">送信する</button>
+      </form>
+    </div>
+
+    <!-- タブ2：アンケート -->
+    <div id="survey-tab" class="tab-content">
+      <form id="surveyForm" class="card">
+        <div class="form-group">
+          <label for="surveyNickname">ニックネーム</label>
+          <input type="text" id="surveyNickname" placeholder="例：みき" required>
+        </div>
+
+        <div class="form-group">
+          <label for="listened">聴いた（人からおすすめされた曲や体験）</label>
+          <textarea id="listened" rows="3" placeholder="友達におすすめされた〇〇を聴いてハマった！など" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="recommended">聴いてもらった（人におすすめした曲や体験）</label>
+          <textarea id="recommended" rows="3" placeholder="ゼミの子に〇〇を勧めたら気に入ってくれた！など" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">送信する</button>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
