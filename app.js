@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ★ここにGASのウェブアプリURLを貼り付ける
-  const GAS_URL = "ここにウェブアプリのURLを貼り付け";
+  const GAS_URL = "https://script.google.com/macros/s/AKfycbxw--GD6D1MtkVbPx0Ng-5KN98NjYP-c9hGehEduTvlVix2fid9C6O_NpnMDXyrlSAnVg/exec";
 
   const tabBtns = document.querySelectorAll(".tab-btn");
   const tabContents = document.querySelectorAll(".tab-content");
